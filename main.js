@@ -52,3 +52,23 @@ next.addEventListener('mouseleave', () => {
 
 // Inicializa
 updateCarousel(current);
+
+// ================= CARDS INTERATIVOS =================
+
+document.querySelectorAll('.card').forEach(card => {
+  const btnOpen  = card.querySelector('.card__btn-open');
+  const btnClose = card.querySelector('.card__btn-close');
+  const back     = card.querySelector('.card__back');
+
+  btnOpen.addEventListener('click', () => {
+    back.removeAttribute('hidden');
+    btnOpen.setAttribute('aria-expanded', 'true');
+    btnClose.focus();
+  });
+
+  btnClose.addEventListener('click', () => {
+    back.setAttribute('hidden', '');
+    btnOpen.setAttribute('aria-expanded', 'false');
+    btnOpen.focus();
+  });
+});

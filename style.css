@@ -691,6 +691,155 @@ body {
   background: #76B900;
 }
 
+/* ================= DESTAQUE ================= */
+
+.destaque {
+  position: relative;
+  margin: 0 auto;
+  width: 784px;
+  height: 240px;
+  border-radius: 8px;
+  background: #1A1A1A;
+  box-shadow:
+    0px 4px 6px -4px rgba(0, 0, 0, 0.10),
+    0px 10px 15px -3px rgba(0, 0, 0, 0.10);
+}
+
+.destaque__container {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  width: 720px;
+  height: 176px;
+  display: flex;
+  align-items: center; 
+}
+
+.destaque__text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 29.25px;
+  letter-spacing: 0px;
+  color: #fff;
+}
+
+/* ================= CARDS INTERATIVOS ================= */
+
+.cards {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.card {
+  position: relative;
+  width: 304px;
+  flex-shrink: 0;
+}
+
+/* FRENTE */
+.card__front {
+  width: 304px;
+  min-height: 320px;
+  padding: 32px;
+  border-radius: 8px;
+  background: #F9FAFB;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start; 
+}
+
+.card__question {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  color: #1E293B;
+}
+
+.card__btn-open {
+  width: 102.92px;
+  height: 42px;
+  padding: 8px 32px;
+  border-radius: 4px;
+  border: 1px solid #E5E7EB;
+  background: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #334155;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.card__btn-open:hover {
+  background: #76B900;
+  border-color: #76B900;
+  color: #fff;
+}
+
+/* VERSO */
+.card__back[hidden] {
+  display: none;
+}
+.card__back {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 320px;
+  min-height: 336px;
+  padding: 32px;
+  border-radius: 8px;
+  background: #0C0A08;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+  animation: cardOpen 0.2s ease;
+}
+
+@keyframes cardOpen {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.card__text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #D1D5DB;
+  text-align: center;
+  padding: 0 16px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.card__btn-close {
+  height: 42px;
+  padding: 8px 32px;
+  border-radius: 4px;
+  border: 1px solid #4B5563;
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.card__btn-close:hover {
+  background: #76B900;
+  border-color: #76B900;
+}
 /* ================= RESPONSIVO ================= */
 
 @media (max-width: 1100px) {

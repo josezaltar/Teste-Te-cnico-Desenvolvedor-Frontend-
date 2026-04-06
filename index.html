@@ -73,11 +73,9 @@
       </div>
     </div>
   </header>
-
   <main class="page">
     <section class="section">
       <div class="section__inner">
-
         <!-- VIDEO -->
         <div class="video">
           <div class="video__header">
@@ -125,7 +123,6 @@
             </div>
           </div>
         </div>
-
         <!-- IMAGEM LATERAL -->
         <div class="imagem_lateral">
           <div class="imagem_lateral__media">
@@ -148,12 +145,11 @@
             </div>
           </div>
         </div>
-
         <!-- CARROSSEL -->
         <div class="carrossel">
           <div class="carrossel__media">
-            <img src="image/image_forest_road.png" class="carrossel__img active" alt="Floresta com estrada">
             <img src="image/image_snow.jpg"        class="carrossel__img"        alt="Neve">
+            <img src="image/image_forest_road.png" class="carrossel__img active" alt="Floresta com estrada">
             <img src="image/image_beach.jpg"       class="carrossel__img"        alt="Praia">
           </div>
           <div class="carrossel__footer">
@@ -165,7 +161,73 @@
             <button class="carrossel__btn carrossel__btn--next" aria-label="Próximo slide"></button>
           </div>
         </div>
-
+        <!-- DESTAQUE -->
+        <div class="destaque">
+          <div class="destaque__container">
+            <p class="destaque__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore nihil corporis
+              suscipit soluta dolorem id consectetur, tenetur nesciunt ducimus maiores sequi
+              veritatis nostrum, esse eaque delectus ea laboriosam repellendus! Ipsum nobis,
+              mollitia facilis praesentium cupiditate quidem eaque itaque nulla ab obcaecati
+              sapiente sequi porro, totam, non molestias excepturi explicabo adipisci deleniti
+              architecto animi!
+            </p>
+          </div>
+        </div>
+        <!-- CARDS INTERATIVOS -->
+        <div class="cards">
+          <article class="card" id="card-1">
+            <div class="card__front">
+              <span class="card__question">?</span>
+              <button class="card__btn-open" aria-expanded="false" aria-controls="card-1-back">Abrir</button>
+            </div>
+            <div class="card__back" id="card-1-back" hidden>
+              <p class="card__text">
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Saepe excepturi, dolores
+                perspiciatis commodi eum
+                dolore nesciunt tempore
+                similique at quas.
+              </p>
+              <button class="card__btn-close">Fechar</button>
+            </div>
+          </article>
+          <article class="card" id="card-2">
+            <div class="card__front">
+              <span class="card__question">?</span>
+              <button class="card__btn-open" aria-expanded="true" aria-controls="card-2-back">Abrir</button>
+            </div>
+            <div class="card__back" id="card-2-back">  <!-- sem hidden -->
+              <p class="card__text">
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Saepe excepturi, dolores
+                perspiciatis commodi eum
+                dolore nesciunt tempore
+                similique at quas.
+              </p>
+              <button class="card__btn-close">Fechar</button>
+            </div>
+          </article>
+          <article class="card" id="card-3">
+            <div class="card__front">
+              <span class="card__question">?</span>
+              <button class="card__btn-open" aria-expanded="false" aria-controls="card-3-back">Abrir</button>
+            </div>
+            <div class="card__back" id="card-3-back" hidden>
+              <p class="card__text">
+                Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Saepe excepturi, dolores
+                perspiciatis commodi eum
+                dolore nesciunt tempore
+                similique at quas.
+              </p>
+              <button class="card__btn-close">Fechar</button>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
   </main>
