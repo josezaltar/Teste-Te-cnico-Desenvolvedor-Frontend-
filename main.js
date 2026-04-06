@@ -55,20 +55,44 @@ updateCarousel(current);
 
 // ================= CARDS INTERATIVOS =================
 
-document.querySelectorAll('.card').forEach(card => {
-  const btnOpen  = card.querySelector('.card__btn-open');
+const cards = document.querySelectorAll('.card');
+
+function closeCard(card) {
+  const btnOpen = card.querySelector('.card__btn-open');
+  const back = card.querySelector('.card__back');
+  
+  back.setAttribute('hidden', '');
+  btnOpen.setAttribute('aria-expanded', 'false');
+}
+
+function closeAllCards() {
+  cards.forEach(card => closeCard(card));
+}
+
+function openCard(card) {
+  const btnOpen = card.querySelector('.card__btn-open');
   const btnClose = card.querySelector('.card__btn-close');
-  const back     = card.querySelector('.card__back');
+  const back = card.querySelector('.card__back');
+  
+  // Fecha todos os outros primeiro
+  closeAllCards();
+  
+  // Abre este card
+  back.removeAttribute('hidden');
+  btnOpen.setAttribute('aria-expanded', 'true');
+  btnClose.focus();
+}
+
+cards.forEach(card => {
+  const btnOpen = card.querySelector('.card__btn-open');
+  const btnClose = card.querySelector('.card__btn-close');
 
   btnOpen.addEventListener('click', () => {
-    back.removeAttribute('hidden');
-    btnOpen.setAttribute('aria-expanded', 'true');
-    btnClose.focus();
+    openCard(card);
   });
 
   btnClose.addEventListener('click', () => {
-    back.setAttribute('hidden', '');
-    btnOpen.setAttribute('aria-expanded', 'false');
+    closeCard(card);
     btnOpen.focus();
   });
 });

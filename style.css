@@ -750,7 +750,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start; 
+  align-items: center; 
 }
 
 .card__question {
@@ -759,6 +759,9 @@ body {
   font-size: 36px;
   line-height: 40px;
   color: #1E293B;
+  flex: 1;              
+  display: flex;        
+  align-items: center;  
 }
 
 .card__btn-open {
@@ -778,9 +781,9 @@ body {
 }
 
 .card__btn-open:hover {
-  background: #76B900;
-  border-color: #76B900;
-  color: #fff;
+  background: #0C0A08;      
+  border-color: #0C0A08;
+  color: #fff;              
 }
 
 /* VERSO */
@@ -833,12 +836,13 @@ body {
   line-height: 24px;
   color: #fff;
   cursor: pointer;
-  transition: background 0.2s, border-color 0.2s;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
 
 .card__btn-close:hover {
-  background: #76B900;
-  border-color: #76B900;
+  background: #fff;         
+  border-color: #fff;
+  color: #0C0A08;           
 }
 /* ================= RESPONSIVO ================= */
 
