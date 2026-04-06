@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="main.js"></script>
 </head>
 <body>
   <header class="hero">
@@ -147,9 +148,25 @@
         </div>
       </div>
     </div>
-
+    <div class="carrossel">
+      <div class="carrossel__media">
+      <img src="image/image_forest_road.png" class="carrossel__img active">
+      <img src="image/image_snow.jpg" class="carrossel__img">
+      <img src="image/image_beach.jpg" class="carrossel__img">
+    </div>
+      <div class="carrossel__footer">
+        <button class="carrossel__btn carrossel__btn--prev"></button>
+        <div class="carrossel__dots">
+          <span class="carrossel__dot"></span>
+          <span class="carrossel__dot carrossel__dot--active"></span>
+          <span class="carrossel__dot"></span>
+        </div>
+        <button class="carrossel__btn carrossel__btn--next"></button>
+      </div>
+    </div>
   </div>
 </section>
 </main>
+<script src="./main.js" defer></script>
 </body>
 </html>
