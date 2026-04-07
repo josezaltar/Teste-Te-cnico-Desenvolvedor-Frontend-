@@ -1004,7 +1004,186 @@ body {
 .podcast__settings:hover i {
   color: #76B900;
 }
+/* ================= ATIVIDADE DISCURSIVA ================= */
 
+.atividade {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* Header */
+.atividade__header {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.atividade__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  background: rgba(118, 185, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.atividade__icon i {
+  font-size: 16px;
+  color: #76B900;
+}
+
+.atividade__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.atividade__title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: #0F172A;
+}
+
+.atividade__desc {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #5C6B48;
+}
+
+/* Textarea */
+.atividade__textarea {
+  width: 100%;
+  min-height: 160px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
+  background: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #0F172A;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.atividade__textarea::placeholder {
+  color: #94A3B8;
+}
+
+.atividade__textarea:focus {
+  outline: none;
+  border-color: #76B900;
+}
+
+/* Botões */
+.atividade__buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.atividade__btn {
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.atividade__btn--secondary {
+  background: #F3F4F6;
+  color: #9CA3AF;
+}
+
+.atividade__btn--secondary:hover {
+  background: #E5E7EB;
+  color: #6B7280;
+}
+
+.atividade__btn--primary {
+  background: #0C0A08;
+  color: #fff;
+}
+
+.atividade__btn--primary:hover {
+  background: #76B900;
+}
+
+/* Feedback de sucesso */
+.atividade__feedback {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #E8F5E9;
+  border: 1px solid #DCFCE7;
+  align-items: flex-start;
+}
+
+.atividade__feedback-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.atividade__feedback-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #14532D;
+}
+
+.atividade__feedback-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22.75px;
+  color: #166534;
+}
+
+.atividade__feedback-close {
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.atividade__feedback-close i {
+  font-size: 12px;
+  color: #15803D;
+  transition: color 0.2s;
+}
+
+.atividade__feedback-close:hover i {
+  color: #14532D;
+}
 /* ================= RESPONSIVO ================= */
 
 /* Tablet Grande */
@@ -1242,5 +1421,44 @@ body {
 
   .podcast__time {
     display: none;
+  }
+}
+@media (max-width: 768px) {
+  .atividade {
+    padding: 24px;
+    gap: 16px;
+  }
+
+  .atividade__header {
+    flex-direction: column;
+  }
+
+  .atividade__title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .atividade__desc {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .atividade__buttons {
+    flex-direction: column;
+  }
+
+  .atividade__btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .atividade {
+    padding: 16px;
+  }
+
+  .atividade__textarea {
+    min-height: 120px;
   }
 }
