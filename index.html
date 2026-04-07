@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EdTech – Header</title>
+  <title>Teste Técnico – Desenvolvedor(a) Frontend (EdTech)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
@@ -73,9 +73,11 @@
       </div>
     </div>
   </header>
+
   <main class="page">
     <section class="section">
       <div class="section__inner">
+
         <!-- VIDEO -->
         <div class="video">
           <div class="video__header">
@@ -88,45 +90,36 @@
               </p>
             </div>
           </div>
-          <div class="video__media">
-            <img src="./image/image_video.png" alt="Thumbnail do vídeo" class="video__img" />
-            <button class="video__play" aria-label="Reproduzir vídeo">
+          <div class="video__media" id="video-container">
+            <!-- Thumbnail inicial -->
+            <img src="./image/image_video.png" alt="Thumbnail do vídeo" class="video__img" id="video-thumbnail" />
+            
+            <!-- Botão Play central -->
+            <button class="video__play" id="video-play-btn" aria-label="Reproduzir vídeo">
               <span class="video__play-shadow"></span>
               <span class="video__play-icon"></span>
             </button>
-            <div class="video__overlay"></div>
-            <div class="video__gradient">
-              <div class="video__controls">
-                <div class="video__controls-left">
-                  <button class="control-btn" aria-label="Play/Pause">
-                    <i class="fa-solid fa-play"></i>
-                  </button>
-                  <div class="control-progress">
-                    <div class="control-progress__bar">
-                      <div class="control-progress__fill"></div>
-                    </div>
-                  </div>
-                  <div class="control-time">01:02</div>
-                </div>
-                <div class="video__controls-right">
-                  <button class="control-btn" aria-label="Legendas"><i class="fa-solid fa-closed-captioning"></i></button>
-                  <button class="control-btn" aria-label="Configurações"><i class="fa-solid fa-gear"></i></button>
-                  <button class="control-btn" aria-label="Tela cheia"><i class="fa-solid fa-expand"></i></button>
-                  <div class="control-volume">
-                    <div class="control-volume__bar">
-                      <div class="control-volume__fill"></div>
-                      <div class="control-volume__thumb"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            
+            <!-- Iframe do YouTube (escondido inicialmente) -->
+            <div class="video__iframe-wrapper" id="video-iframe-wrapper">
+              <iframe 
+                id="video-iframe"
+                src="" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+              </iframe>
             </div>
+            
+            <!-- Overlay -->
+            <div class="video__overlay" id="video-overlay"></div>
           </div>
         </div>
+
         <!-- IMAGEM LATERAL -->
         <div class="imagem_lateral">
           <div class="imagem_lateral__media">
-            <img src="image/image_lateral.png" alt="Imagem lateral" class="imagem_lateral__img">
+            <img src="./image/image_lateral.png" alt="Imagem lateral" class="imagem_lateral__img">
           </div>
           <div class="imagem_lateral__content">
             <div class="imagem_lateral__text">
@@ -145,22 +138,25 @@
             </div>
           </div>
         </div>
+
         <!-- CARROSSEL -->
         <div class="carrossel">
           <div class="carrossel__media">
-            <img src="image/image_snow.jpg"        class="carrossel__img"        alt="Neve">
-            <img src="image/image_forest_road.png" class="carrossel__img active" alt="Floresta com estrada">
-            <img src="image/image_beach.jpg"       class="carrossel__img"        alt="Praia">
+            <img src="./image/image_snow.jpg" class="carrossel__img" alt="Neve">
+            <img src="./image/image_forest_road.png" class="carrossel__img active" alt="Floresta com estrada">
+            <img src="./image/image_beach.jpg" class="carrossel__img" alt="Praia">
           </div>
           <div class="carrossel__footer">
-            <button class="carrossel__btn carrossel__btn--prev" aria-label="Slide anterior"></button>            <div class="carrossel__dots" role="list">
-              <span class="carrossel__dot carrossel__dot--active" role="listitem"></span>
+            <button class="carrossel__btn carrossel__btn--prev" aria-label="Slide anterior"></button>
+            <div class="carrossel__dots" role="list">
               <span class="carrossel__dot" role="listitem"></span>
+              <span class="carrossel__dot carrossel__dot--active" role="listitem"></span>
               <span class="carrossel__dot" role="listitem"></span>
             </div>
             <button class="carrossel__btn carrossel__btn--next" aria-label="Próximo slide"></button>
           </div>
         </div>
+
         <!-- DESTAQUE -->
         <div class="destaque">
           <div class="destaque__container">
@@ -174,6 +170,7 @@
             </p>
           </div>
         </div>
+
         <!-- CARDS INTERATIVOS -->
         <div class="cards">
           <article class="card" id="card-1">
@@ -193,12 +190,13 @@
               <button class="card__btn-close">Fechar</button>
             </div>
           </article>
+
           <article class="card" id="card-2">
             <div class="card__front">
               <span class="card__question">?</span>
-              <button class="card__btn-open" aria-expanded="true" aria-controls="card-2-back">Abrir</button>
+              <button class="card__btn-open" aria-expanded="false" aria-controls="card-2-back">Abrir</button>
             </div>
-            <div class="card__back" id="card-2-back">  <!-- sem hidden -->
+            <div class="card__back" id="card-2-back" hidden>
               <p class="card__text">
                 Lorem ipsum dolor sit amet
                 consectetur adipisicing elit.
@@ -210,6 +208,7 @@
               <button class="card__btn-close">Fechar</button>
             </div>
           </article>
+
           <article class="card" id="card-3">
             <div class="card__front">
               <span class="card__question">?</span>
@@ -228,6 +227,7 @@
             </div>
           </article>
         </div>
+
         <!-- TEXTO -->
         <div class="texto">
           <div class="texto__heading">
@@ -242,40 +242,42 @@
             </p>
           </div>
         </div>
+
         <!-- PODCAST -->
         <div class="podcast">
-        <audio id="podcast-audio" src="./audio/audio_podcast_exemplo.mp3" preload="metadata"></audio>
-        
-        <!-- Botão Play/Pause -->
-        <button class="podcast__play" id="podcast-play" aria-label="Play/Pause">
-          <i class="fa-solid fa-play" id="podcast-play-icon"></i>
-        </button>
-        
-        <!-- Barra de Progresso -->
-        <div class="podcast__progress" id="podcast-progress">
-          <div class="podcast__progress-fill" id="podcast-progress-fill"></div>
-          <div class="podcast__progress-thumb" id="podcast-progress-thumb"></div>
-        </div>
-        
-        <!-- Tempo -->
-        <div class="podcast__time" id="podcast-time">00:00</div>
-        
-        <!-- Volume -->
-        <div class="podcast__volume">
-          <button class="podcast__volume-icon" id="podcast-volume-icon" aria-label="Volume">
-            <i class="fa-solid fa-volume-high"></i>
+          <audio id="podcast-audio" src="./audio/audio_podcast_exemplo.mp3" preload="metadata"></audio>
+          
+          <!-- Botão Play/Pause -->
+          <button class="podcast__play" id="podcast-play" aria-label="Play/Pause">
+            <i class="fa-solid fa-play" id="podcast-play-icon"></i>
           </button>
-          <div class="podcast__volume-bar" id="podcast-volume-bar">
-            <div class="podcast__volume-fill" id="podcast-volume-fill"></div>
-            <div class="podcast__volume-thumb" id="podcast-volume-thumb"></div>
+          
+          <!-- Barra de Progresso -->
+          <div class="podcast__progress" id="podcast-progress">
+            <div class="podcast__progress-fill" id="podcast-progress-fill"></div>
+            <div class="podcast__progress-thumb" id="podcast-progress-thumb"></div>
           </div>
+          
+          <!-- Tempo -->
+          <div class="podcast__time" id="podcast-time">00:00</div>
+          
+          <!-- Volume -->
+          <div class="podcast__volume">
+            <button class="podcast__volume-icon" id="podcast-volume-icon" aria-label="Volume">
+              <i class="fa-solid fa-volume-high"></i>
+            </button>
+            <div class="podcast__volume-bar" id="podcast-volume-bar">
+              <div class="podcast__volume-fill" id="podcast-volume-fill"></div>
+              <div class="podcast__volume-thumb" id="podcast-volume-thumb"></div>
+            </div>
+          </div>
+          
+          <!-- Botão Configurações -->
+          <button class="podcast__settings" aria-label="Configurações">
+            <i class="fa-solid fa-gear"></i>
+          </button>
         </div>
-        
-        <!-- Botão Configurações -->
-        <button class="podcast__settings" aria-label="Configurações">
-          <i class="fa-solid fa-gear"></i>
-        </button>
-        </div>
+
       </div>
     </section>
   </main>
@@ -283,5 +285,6 @@
   <script src="./js/carrossel.js"></script>
   <script src="./js/cards.js"></script>
   <script src="./js/podcast.js"></script>
+  <script src="./js/video.js"></script>
 </body>
 </html>
