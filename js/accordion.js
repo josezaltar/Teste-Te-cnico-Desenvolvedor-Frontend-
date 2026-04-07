@@ -17,7 +17,7 @@ accordionItems.forEach(item => {
     }
   }
 
-  // Fecha outros items ao abrir um (opcional - accordion exclusivo)
+  // Fecha outros items ao abrir um (accordion exclusivo)
   summary.addEventListener('click', (e) => {
     // Fecha todos os outros
     accordionItems.forEach(otherItem => {

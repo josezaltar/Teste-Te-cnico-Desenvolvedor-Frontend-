@@ -91,16 +91,11 @@
             </div>
           </div>
           <div class="video__media" id="video-container">
-            <!-- Thumbnail inicial -->
             <img src="./image/image_video.png" alt="Thumbnail do vídeo" class="video__img" id="video-thumbnail" />
-            
-            <!-- Botão Play central -->
             <button class="video__play" id="video-play-btn" aria-label="Reproduzir vídeo">
               <span class="video__play-shadow"></span>
               <span class="video__play-icon"></span>
             </button>
-            
-            <!-- Iframe do YouTube (escondido inicialmente) -->
             <div class="video__iframe-wrapper" id="video-iframe-wrapper">
               <iframe 
                 id="video-iframe"
@@ -110,8 +105,6 @@
                 allowfullscreen>
               </iframe>
             </div>
-            
-            <!-- Overlay -->
             <div class="video__overlay" id="video-overlay"></div>
           </div>
         </div>
@@ -180,12 +173,9 @@
             </div>
             <div class="card__back" id="card-1-back" hidden>
               <p class="card__text">
-                Lorem ipsum dolor sit amet
-                consectetur adipisicing elit.
-                Saepe excepturi, dolores
-                perspiciatis commodi eum
-                dolore nesciunt tempore
-                similique at quas.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Saepe excepturi, dolores perspiciatis commodi eum
+                dolore nesciunt tempore similique at quas.
               </p>
               <button class="card__btn-close">Fechar</button>
             </div>
@@ -198,12 +188,9 @@
             </div>
             <div class="card__back" id="card-2-back" hidden>
               <p class="card__text">
-                Lorem ipsum dolor sit amet
-                consectetur adipisicing elit.
-                Saepe excepturi, dolores
-                perspiciatis commodi eum
-                dolore nesciunt tempore
-                similique at quas.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Saepe excepturi, dolores perspiciatis commodi eum
+                dolore nesciunt tempore similique at quas.
               </p>
               <button class="card__btn-close">Fechar</button>
             </div>
@@ -216,12 +203,9 @@
             </div>
             <div class="card__back" id="card-3-back" hidden>
               <p class="card__text">
-                Lorem ipsum dolor sit amet
-                consectetur adipisicing elit.
-                Saepe excepturi, dolores
-                perspiciatis commodi eum
-                dolore nesciunt tempore
-                similique at quas.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Saepe excepturi, dolores perspiciatis commodi eum
+                dolore nesciunt tempore similique at quas.
               </p>
               <button class="card__btn-close">Fechar</button>
             </div>
@@ -242,25 +226,18 @@
             </p>
           </div>
         </div>
+
         <!-- PODCAST -->
         <div class="podcast">
           <audio id="podcast-audio" src="./audio/audio_podcast_exemplo.mp3" preload="metadata"></audio>
-          
-          <!-- Botão Play/Pause -->
           <button class="podcast__play" id="podcast-play" aria-label="Play/Pause">
             <i class="fa-solid fa-play" id="podcast-play-icon"></i>
           </button>
-          
-          <!-- Barra de Progresso -->
           <div class="podcast__progress" id="podcast-progress">
             <div class="podcast__progress-fill" id="podcast-progress-fill"></div>
             <div class="podcast__progress-thumb" id="podcast-progress-thumb"></div>
           </div>
-          
-          <!-- Tempo -->
           <div class="podcast__time" id="podcast-time">00:00</div>
-          
-          <!-- Volume -->
           <div class="podcast__volume">
             <button class="podcast__volume-icon" id="podcast-volume-icon" aria-label="Volume">
               <i class="fa-solid fa-volume-high"></i>
@@ -270,18 +247,16 @@
               <div class="podcast__volume-thumb" id="podcast-volume-thumb"></div>
             </div>
           </div>
-          
-          <!-- Botão Configurações -->
           <button class="podcast__settings" aria-label="Configurações">
             <i class="fa-solid fa-gear"></i>
           </button>
         </div>
+
         <!-- ATIVIDADE DISCURSIVA -->
-        <div class="atividade">
-          <!-- Header com ícone e texto -->
+        <div class="atividade" id="atividade-discursiva">
           <div class="atividade__header">
             <div class="atividade__icon">
-              <i class="fa-solid fa-comment-dots"></i>
+              <i class="fa-regular fa-comments"></i>
             </div>
             <div class="atividade__info">
               <h3 class="atividade__title">Atividade discursiva</h3>
@@ -290,16 +265,20 @@
               </p>
             </div>
           </div>
-          <!-- Textarea -->
-          <textarea class="atividade__textarea" placeholder="Digite sua resposta aqui..."></textarea>
-          <!-- Botões -->
+
+          <textarea 
+            class="atividade__textarea" 
+            id="discursiva-textarea"
+            placeholder="Digite sua resposta aqui..."
+            aria-label="Digite sua resposta"
+          ></textarea>
+
           <div class="atividade__buttons">
-            <button class="atividade__btn atividade__btn--secondary">Responder</button>
-            <button class="atividade__btn atividade__btn--primary">Alterar</button>
+            <button class="atividade__btn atividade__btn--secondary" id="discursiva-btn-responder">Responder</button>
+            <button class="atividade__btn atividade__btn--primary atividade__btn--disabled" id="discursiva-btn-alterar" disabled>Alterar</button>
           </div>
 
-          <!-- Feedback de sucesso -->
-          <div class="atividade__feedback">
+          <div class="atividade__feedback" id="discursiva-feedback" style="display: none;">
             <div class="atividade__feedback-content">
               <h4 class="atividade__feedback-title">É isso aí!</h4>
               <p class="atividade__feedback-text">
@@ -307,14 +286,14 @@
                 ipsam dignissimos magnam hic, velit est perferendis explicabo aperiam ratione veritatis labore.
               </p>
             </div>
-            <button class="atividade__feedback-close" aria-label="Fechar">
+            <button class="atividade__feedback-close" id="discursiva-feedback-close" aria-label="Fechar">
               <i class="fa-solid fa-xmark"></i>
             </button>
           </div>
         </div>
+
         <!-- ATIVIDADE OBJETIVA -->
-        <div class="objetiva">
-          <!-- Header com ícone e texto -->
+        <div class="objetiva" id="atividade-objetiva">
           <div class="objetiva__header">
             <div class="objetiva__icon">
               <i class="fa-solid fa-book-open"></i>
@@ -326,46 +305,55 @@
               </p>
             </div>
           </div>
-          <!-- Opções -->
-          <div class="objetiva__options">
+
+          <div class="objetiva__options" role="radiogroup" aria-label="Opções da atividade">
             <label class="objetiva__label">
               <span class="objetiva__checkbox">
                 <input type="radio" name="objetiva" value="a">
-                <span class="objetiva__checkmark"></span>
+                <span class="objetiva__checkmark">
+                  <i class="fa-solid fa-check"></i>
+                </span>
               </span>
               <span class="objetiva__text">A) Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
             </label>
-            <label class="objetiva__label objetiva__label--selected">
+
+            <label class="objetiva__label">
               <span class="objetiva__checkbox">
-                <input type="radio" name="objetiva" value="b" checked>
+                <input type="radio" name="objetiva" value="b">
                 <span class="objetiva__checkmark">
                   <i class="fa-solid fa-check"></i>
                 </span>
               </span>
               <span class="objetiva__text">B) Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
             </label>
+
             <label class="objetiva__label">
               <span class="objetiva__checkbox">
                 <input type="radio" name="objetiva" value="c">
-                <span class="objetiva__checkmark"></span>
+                <span class="objetiva__checkmark">
+                  <i class="fa-solid fa-check"></i>
+                </span>
               </span>
               <span class="objetiva__text">C) Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
             </label>
+
             <label class="objetiva__label">
               <span class="objetiva__checkbox">
                 <input type="radio" name="objetiva" value="d">
-                <span class="objetiva__checkmark"></span>
+                <span class="objetiva__checkmark">
+                  <i class="fa-solid fa-check"></i>
+                </span>
               </span>
               <span class="objetiva__text">D) Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
             </label>
           </div>
-          <!-- Botões -->
+
           <div class="objetiva__buttons">
-            <button class="objetiva__btn objetiva__btn--secondary">Responder</button>
-            <button class="objetiva__btn objetiva__btn--primary">Alterar</button>
+            <button class="objetiva__btn objetiva__btn--secondary objetiva__btn--disabled" id="objetiva-btn-responder" disabled>Responder</button>
+            <button class="objetiva__btn objetiva__btn--primary objetiva__btn--disabled" id="objetiva-btn-alterar" disabled>Alterar</button>
           </div>
-          <!-- Feedback de erro -->
-          <div class="objetiva__feedback">
+
+          <div class="objetiva__feedback" id="objetiva-feedback" style="display: none;">
             <div class="objetiva__feedback-content">
               <h4 class="objetiva__feedback-title">Tente novamente!</h4>
               <p class="objetiva__feedback-text">
@@ -373,38 +361,37 @@
                 ipsam dignissimos magnam hic, velit est perferendis explicabo aperiam ratione veritatis labore.
               </p>
             </div>
-            <button class="objetiva__feedback-close" aria-label="Fechar">
+            <button class="objetiva__feedback-close" id="objetiva-feedback-close" aria-label="Fechar">
               <i class="fa-solid fa-xmark"></i>
             </button>
           </div>
         </div>
-        <!-- ACCORDION / PERGUNTAS FREQUENTES -->
+
+        <!-- ACCORDION / FAQ -->
         <div class="accordion">
-          <!-- Header -->
           <div class="accordion__header">
-            <h2 class="accordion__title">Perguntas frequentes</h2>
-            <p class="accordion__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <h2 class="accordion__title">Perguntas Frequentes</h2>
+            <p class="accordion__desc">Encontre respostas para as dúvidas mais comuns</p>
           </div>
-          <!-- Items -->
+
           <div class="accordion__items">
-            <!-- Item 1 - Aberto -->
             <details class="accordion__item" open>
               <summary class="accordion__summary">
-                <span class="accordion__question">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                <span class="accordion__question">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</span>
                 <span class="accordion__icon">
                   <i class="fa-solid fa-chevron-up"></i>
                 </span>
               </summary>
               <div class="accordion__content">
                 <p class="accordion__answer">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
               </div>
             </details>
-            <!-- Item 2 - Fechado -->
+
             <details class="accordion__item">
               <summary class="accordion__summary">
-                <span class="accordion__question">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                <span class="accordion__question">Sed do eiusmod tempor incididunt ut labore?</span>
                 <span class="accordion__icon">
                   <i class="fa-solid fa-chevron-down"></i>
                 </span>
@@ -415,10 +402,10 @@
                 </p>
               </div>
             </details>
-            <!-- Item 3 - Fechado -->
+
             <details class="accordion__item">
               <summary class="accordion__summary">
-                <span class="accordion__question">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                <span class="accordion__question">Ut enim ad minim veniam, quis nostrud exercitation?</span>
                 <span class="accordion__icon">
                   <i class="fa-solid fa-chevron-down"></i>
                 </span>
@@ -429,10 +416,10 @@
                 </p>
               </div>
             </details>
-            <!-- Item 4 - Fechado -->
+
             <details class="accordion__item">
               <summary class="accordion__summary">
-                <span class="accordion__question">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                <span class="accordion__question">Duis aute irure dolor in reprehenderit in voluptate?</span>
                 <span class="accordion__icon">
                   <i class="fa-solid fa-chevron-down"></i>
                 </span>
@@ -445,27 +432,31 @@
             </details>
           </div>
         </div>
+
       </div>
     </section>
   </main>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__container">
       <div class="footer__content">
         <div class="footer__logo">
-          <img src="./image/logo_footer.png" alt="DOT Digital Group" class="footer__logo-img">
+          <img src="./image/logo_footer.png" alt="Logo" class="footer__logo-img">
         </div>
         <div class="footer__copyright">
-          <p class="footer__text">© 2026 DOT Digital Group. Todos os direitos reservados.</p>
+          <p class="footer__text">© 2024 Todos os direitos reservados</p>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="./js/carrossel.js"></script>
   <script src="./js/cards.js"></script>
   <script src="./js/podcast.js"></script>
   <script src="./js/video.js"></script>
   <script src="./js/accordion.js"></script>
+  <script src="./js/atividades.js"></script>
 </body>
 </html>
