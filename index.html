@@ -6,7 +6,7 @@
   <title>EdTech – Header</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -228,10 +228,60 @@
             </div>
           </article>
         </div>
+        <!-- TEXTO -->
+        <div class="texto">
+          <div class="texto__heading">
+            <h2 class="texto__title">
+              Lorem ipsum dolor, sit amet consectetur<br>
+              adipisicing elit
+            </h2>
+          </div>
+          <div class="texto__container">
+            <p class="texto__desc">
+              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+            </p>
+          </div>
+        </div>
+        <!-- PODCAST -->
+        <div class="podcast">
+        <audio id="podcast-audio" src="./audio/audio_podcast_exemplo.mp3" preload="metadata"></audio>
+        
+        <!-- Botão Play/Pause -->
+        <button class="podcast__play" id="podcast-play" aria-label="Play/Pause">
+          <i class="fa-solid fa-play" id="podcast-play-icon"></i>
+        </button>
+        
+        <!-- Barra de Progresso -->
+        <div class="podcast__progress" id="podcast-progress">
+          <div class="podcast__progress-fill" id="podcast-progress-fill"></div>
+          <div class="podcast__progress-thumb" id="podcast-progress-thumb"></div>
+        </div>
+        
+        <!-- Tempo -->
+        <div class="podcast__time" id="podcast-time">00:00</div>
+        
+        <!-- Volume -->
+        <div class="podcast__volume">
+          <button class="podcast__volume-icon" id="podcast-volume-icon" aria-label="Volume">
+            <i class="fa-solid fa-volume-high"></i>
+          </button>
+          <div class="podcast__volume-bar" id="podcast-volume-bar">
+            <div class="podcast__volume-fill" id="podcast-volume-fill"></div>
+            <div class="podcast__volume-thumb" id="podcast-volume-thumb"></div>
+          </div>
+        </div>
+        
+        <!-- Botão Configurações -->
+        <button class="podcast__settings" aria-label="Configurações">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+        </div>
       </div>
     </section>
   </main>
 
-  <script src="./main.js"></script>
+  <script src="./js/carrossel.js"></script>
+  <script src="./js/cards.js"></script>
+  <script src="./js/podcast.js"></script>
 </body>
 </html>
