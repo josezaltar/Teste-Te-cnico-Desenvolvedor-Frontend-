@@ -8,10 +8,7 @@ const videoIframeWrapper = document.getElementById('video-iframe-wrapper');
 const videoIframe = document.getElementById('video-iframe');
 
 // ID do vídeo do YouTube (pode trocar por qualquer vídeo)
-// Exemplos de como extrair o ID:
-// https://www.youtube.com/watch?v=VIDEO_ID
-// https://youtu.be/VIDEO_ID
-const YOUTUBE_VIDEO_ID = 'dQw4w9WgXcQ'; // Substitua pelo ID do vídeo desejado
+let currentVideoId = 'dQw4w9WgXcQ'; // Substitua pelo ID do vídeo desejado
 
 // Função para extrair ID do YouTube de uma URL
 function extractYouTubeId(url) {
@@ -39,15 +36,16 @@ function loadVideo(videoId) {
   videoIframeWrapper.classList.add('active');
 }
 
+// Função para iniciar o vídeo atual
+function playCurrentVideo() {
+  loadVideo(currentVideoId);
+}
+
 // Clique no botão play
-videoPlayBtn.addEventListener('click', () => {
-  loadVideo(YOUTUBE_VIDEO_ID);
-});
+videoPlayBtn.addEventListener('click', playCurrentVideo);
 
 // Clique na thumbnail também inicia o vídeo
-videoThumbnail.addEventListener('click', () => {
-  loadVideo(YOUTUBE_VIDEO_ID);
-});
+videoThumbnail.addEventListener('click', playCurrentVideo);
 
 // Função pública para trocar o vídeo (pode ser chamada externamente)
 window.changeVideo = function(urlOrId) {
@@ -64,13 +62,5 @@ window.changeVideo = function(urlOrId) {
   videoThumbnail.src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
   
   // Atualiza o ID para o próximo play
-  window.currentVideoId = videoId;
+  currentVideoId = videoId;
 };
-
-// Permite trocar vídeo dinamicamente
-window.currentVideoId = YOUTUBE_VIDEO_ID;
-
-// Atualiza o listener para usar o ID atual
-videoPlayBtn.addEventListener('click', () => {
-  loadVideo(window.currentVideoId || YOUTUBE_VIDEO_ID);
-});

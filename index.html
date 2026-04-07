@@ -312,13 +312,160 @@
             </button>
           </div>
         </div>
+        <!-- ATIVIDADE OBJETIVA -->
+        <div class="objetiva">
+          <!-- Header com ícone e texto -->
+          <div class="objetiva__header">
+            <div class="objetiva__icon">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div class="objetiva__info">
+              <h3 class="objetiva__title">Atividade Objetiva</h3>
+              <p class="objetiva__desc">
+                It is a long established fact that a reader will be distracted by the readable content of a page.
+              </p>
+            </div>
+          </div>
+          <!-- Opções -->
+          <div class="objetiva__options">
+            <label class="objetiva__label">
+              <span class="objetiva__checkbox">
+                <input type="radio" name="objetiva" value="a">
+                <span class="objetiva__checkmark"></span>
+              </span>
+              <span class="objetiva__text">A) Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+            </label>
+            <label class="objetiva__label objetiva__label--selected">
+              <span class="objetiva__checkbox">
+                <input type="radio" name="objetiva" value="b" checked>
+                <span class="objetiva__checkmark">
+                  <i class="fa-solid fa-check"></i>
+                </span>
+              </span>
+              <span class="objetiva__text">B) Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+            </label>
+            <label class="objetiva__label">
+              <span class="objetiva__checkbox">
+                <input type="radio" name="objetiva" value="c">
+                <span class="objetiva__checkmark"></span>
+              </span>
+              <span class="objetiva__text">C) Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+            </label>
+            <label class="objetiva__label">
+              <span class="objetiva__checkbox">
+                <input type="radio" name="objetiva" value="d">
+                <span class="objetiva__checkmark"></span>
+              </span>
+              <span class="objetiva__text">D) Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+            </label>
+          </div>
+          <!-- Botões -->
+          <div class="objetiva__buttons">
+            <button class="objetiva__btn objetiva__btn--secondary">Responder</button>
+            <button class="objetiva__btn objetiva__btn--primary">Alterar</button>
+          </div>
+          <!-- Feedback de erro -->
+          <div class="objetiva__feedback">
+            <div class="objetiva__feedback-content">
+              <h4 class="objetiva__feedback-title">Tente novamente!</h4>
+              <p class="objetiva__feedback-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur commodi odio maiores accusamus aspernatur consequatur
+                ipsam dignissimos magnam hic, velit est perferendis explicabo aperiam ratione veritatis labore.
+              </p>
+            </div>
+            <button class="objetiva__feedback-close" aria-label="Fechar">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+        <!-- ACCORDION / PERGUNTAS FREQUENTES -->
+        <div class="accordion">
+          <!-- Header -->
+          <div class="accordion__header">
+            <h2 class="accordion__title">Perguntas frequentes</h2>
+            <p class="accordion__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+          <!-- Items -->
+          <div class="accordion__items">
+            <!-- Item 1 - Aberto -->
+            <details class="accordion__item" open>
+              <summary class="accordion__summary">
+                <span class="accordion__question">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                <span class="accordion__icon">
+                  <i class="fa-solid fa-chevron-up"></i>
+                </span>
+              </summary>
+              <div class="accordion__content">
+                <p class="accordion__answer">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            </details>
+            <!-- Item 2 - Fechado -->
+            <details class="accordion__item">
+              <summary class="accordion__summary">
+                <span class="accordion__question">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                <span class="accordion__icon">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </summary>
+              <div class="accordion__content">
+                <p class="accordion__answer">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </details>
+            <!-- Item 3 - Fechado -->
+            <details class="accordion__item">
+              <summary class="accordion__summary">
+                <span class="accordion__question">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                <span class="accordion__icon">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </summary>
+              <div class="accordion__content">
+                <p class="accordion__answer">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </details>
+            <!-- Item 4 - Fechado -->
+            <details class="accordion__item">
+              <summary class="accordion__summary">
+                <span class="accordion__question">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                <span class="accordion__icon">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </summary>
+              <div class="accordion__content">
+                <p class="accordion__answer">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
       </div>
     </section>
   </main>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__content">
+        <div class="footer__logo">
+          <img src="./image/logo_footer.png" alt="DOT Digital Group" class="footer__logo-img">
+        </div>
+        <div class="footer__copyright">
+          <p class="footer__text">© 2026 DOT Digital Group. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="./js/carrossel.js"></script>
   <script src="./js/cards.js"></script>
   <script src="./js/podcast.js"></script>
   <script src="./js/video.js"></script>
+  <script src="./js/accordion.js"></script>
 </body>
 </html>
